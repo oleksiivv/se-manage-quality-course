@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/s/IdeaProjects/lab1_se_testng">
+        <classes>
+            <class name="Controllers.CategoryControllerTest">
+                <methods>
+                    <include name="testCreateCategory"/>
+                    <include name="testUpdateCategory"/>
+                    <include name="testDeleteCategory"/>
+                    <include name="testCreateNullCategory"/>
+                    <include name="testUpdateCategoryWithInvalidId"/>
+                    <include name="testDeleteCategoryWithInvalidId"/>
+                </methods>
+            </class>
+            <class name="Controllers.CustomerControllerTest">
+                <methods>
+                    <include name="testCreateCustomer"/>
+                    <include name="testUpdateCustomer"/>
+                    <include name="testDeleteCustomer"/>
+                    <include name="testGetAllCustomers"/>
+                    <include name="testGetCustomerById"/>
+                    <include name="testUpdateCustomerCustomerNotFoundException"/>
+                    <include name="testDeleteCustomerCustomerNotFoundException"/>
+                    <include name="testGetCustomerByIdCustomerNotFoundReturnsNull"/>
+                    <include name="testGetAllCustomersEmptyListReturnsEmptyList"/>
+                </methods>
+            </class>
+            <class name="Controllers.InventoryControllerTest">
+                <methods>
+                    <include name="testProcessOrder"/>
+                    <include name="testGetLowStockProducts"/>
+                </methods>
+            </class>
+            <class name="Controllers.OrderControllerTest">
+                <methods>
+                    <include name="testCreateOrder"/>
+                    <include name="testUpdateOrder"/>
+                    <include name="testDeleteOrder"/>
+                    <include name="testGetOrderById"/>
+                    <include name="testCreateOrderWithNullOrder"/>
+                    <include name="testGetNonExistingOrderById"/>
+                    <include name="testUpdateOrderOrderNotFoundExceptionThrown"/>
+                    <include name="testDeleteOrderOrderNotFoundExceptionThrown"/>
+                </methods>
+            </class>
+            <class name="Controllers.ProductControllerTest">
+                <methods>
+                    <include name="testCreateProduct"/>
+                    <include name="testUpdateProduct"/>
+                    <include name="testDeleteProduct"/>
+                    <include name="testGetProductById"/>
+                    <include name="testGetNonExistingProductById"/>
+                    <include name="testUpdateProductProductNotFoundException"/>
+                    <include name="testDeleteProductProductNotFoundException"/>
+                </methods>
+            </class>
+            <class name="Controllers.ReportControllerTest">
+                <methods>
+                    <include name="testGenerateSalesReportPositive"/>
+                    <include name="testGenerateSalesReportException"/>
+                    <include name="testGenerateInventoryReportPositive"/>
+                    <include name="testGenerateInventoryReportException"/>
+                </methods>
+            </class>
+            <class name="Controllers.SupplierControllerTest">
+                <methods>
+                    <include name="testCreateSupplier"/>
+                    <include name="testUpdateSupplier"/>
+                    <include name="testDeleteSupplier"/>
+                    <include name="testGetSupplierById"/>
+                    <include name="testGetNonExistingSupplierById"/>
+                    <include name="testUpdateNonExistingSupplier"/>
+                    <include name="testDeleteNonExistingSupplier"/>
+                </methods>
+            </class>
+            <class name="Controllers.UserControllerTest">
+                <methods>
+                    <include name="testLogin"/>
+                    <include name="testLogout"/>
+                    <include name="testRegister"/>
+                    <include name="testUpdatePassword"/>
+                    <include name="testParallelExecution"/>
+                    <include name="testRegisterUsernameExistsException"/>
+                    <include name="testUpdatePasswordUserNotFoundException"/>
+                    <include name="testLogoutException"/>
+                </methods>
+            </class>
+            <class name="Models.CategoryTest">
+                <methods>
+                    <include name="testCategoryCreation"/>
+                    <include name="testCategoryId"/>
+                    <include name="testCategoryName"/>
+                    <include name="testCategoryDescription"/>
+                </methods>
+            </class>
+            <class name="Models.CustomerTest">
+                <methods>
+                    <include name="testCustomerCreation"/>
+                    <include name="testCustomerId"/>
+                    <include name="testCustomerName"/>
+                    <include name="testCustomerEmail"/>
+                </methods>
+            </class>
+            <class name="Models.OrderTest">
+                <methods>
+                    <include name="testOrderCreation"/>
+                    <include name="testOrderId"/>
+                    <include name="testOrderProducts"/>
+                    <include name="testOrderDate"/>
+                    <include name="testOrderCustomer"/>
+                </methods>
+            </class>
+            <class name="Models.ProductTest">
+                <methods>
+                    <include name="testProductCreation"/>
+                    <include name="testProductId"/>
+                    <include name="testProductName"/>
+                    <include name="testInvalidProductCreation"/>
+                    <include name="testProductDescription"/>
+                    <include name="testProductPrice"/>
+                    <include name="testProductQuantity"/>
+                    <include name="testProductCategory"/>
+                    <include name="testProductSupplier"/>
+                    <include name="testConstructorInvalidIdException"/>
+                    <include name="testConstructorNullNameException"/>
+                    <include name="testConstructorEmptyNameException"/>
+                    <include name="testSecondConstructorInvalidIdException"/>
+                    <include name="testSecondConstructorNullNameException"/>
+                    <include name="testSecondConstructorEmptyNameException"/>
+                    <include name="testSecondConstructorInvalidPriceException"/>
+                    <include name="testSecondConstructorInvalidQuantity"/>
+                    <include name="testConstructorInvalidPriceException"/>
+                    <include name="testSetPriceInvalidPriceException"/>
+                    <include name="testSetNameNullNameException"/>
+                    <include name="testSetInvalidQuantityException"/>
+                </methods>
+            </class>
+            <class name="Models.SupplierTest">
+                <methods>
+                    <include name="testSupplierCreation"/>
+                    <include name="testSupplierId"/>
+                    <include name="testSupplierName"/>
+                    <include name="testSupplierContactInfo"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
